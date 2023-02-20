@@ -1,0 +1,625 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url(/Web_Official髭男dism/assets/font/Futura\ Bold\ font.ttf);
+}
+
+
+html {
+  font-family: "Futura";
+  scroll-behavior: smooth;
+}
+
+#main {
+}
+
+#header {
+  height: 57.5px;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 2;
+}
+
+
+#header__logo {
+  position: fixed;
+  width: 120px;
+  text-align: center;
+  line-height: 90px;
+}
+
+#header__logo img {
+  width: 60px;
+}
+
+#header__logo img:hover {
+  opacity: 0.6;
+}
+
+#header__navbar {
+  width: 1400px;
+}
+
+#header__navbar #nav {
+  display: block;
+  padding-left: 230px;
+}
+
+#header__navbar #nav li {
+  display: inline-block;
+}
+#header__navbar #nav li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 57.5px;
+  padding: 0px 20px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header__navbar #nav li a:hover {
+  color: rgb(169, 169, 16);
+}
+
+#header__link {
+  position: fixed;
+  display: block;
+  width: 300px;
+  right: 0px;
+  top: 0px;
+  padding-left: 50px;
+}
+
+#header__link ul li {
+  display: inline-block;
+}
+
+#header__link ul li a {
+  color: #fff;
+  line-height: 57.5px;
+  font-size: 25px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+#header__link ul li a:hover {
+  color: rgb(169, 169, 16);
+}
+
+body{
+  background-color: #E6E6E6;
+  height: 100%;
+  position: relative;
+  
+}
+
+#slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+}
+
+#slider__intro {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  z-index: -20;
+}
+
+#slider__intro video {
+  width: 100%;
+  height: auto;
+  /* background-color: #000; */
+  z-index: -20;
+}
+
+
+#intro_logo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 18.5%;
+  background-color: #000;
+}
+#intro_logo #video_logo{
+  background-color: #000;
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height:85%;
+  display: flex;
+  justify-content:  center;
+}
+
+#intro_logo #video_logo video{
+  width: 100%;
+}
+
+#slider__intro .topic {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+#slider__intro .topic ul {
+  display: inline-table;
+  text-align: center;
+  list-style: none;
+}
+
+#slider__intro .topic ul li {
+  border-bottom: 2px solid #fff;
+}
+
+#slider__intro .topic ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#slider__intro .topic ul li a:hover {
+  color: rgb(221, 138, 59);
+}
+
+#slider__intro .topinf {
+  font-size: 30px;
+}
+
+
+.slideshow{
+  background-color: rgba(38, 4, 4, 0);
+  padding-top: 30px;
+}
+
+.slideshow-container{
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mySlides{
+  flex-basis: 10%;
+}
+
+.mySlides a img{
+  border-radius: 20px;
+  width: 500px;
+}
+
+#content {
+  margin-top: 4%;
+  height: 100%;
+  
+}
+
+
+.list-travel-tourist{
+  width: 100%;
+  /* background-color: black; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 2px;
+  
+}
+
+.list-schedule{
+  /* background-color: red; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+ 
+
+}
+
+.schedule {
+  width: 100%;
+  /* background-color: bisque; */
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.schedule li{
+  display: inline-block;
+
+}
+
+.schedule li p{
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: left;
+  color: #000;
+  /* background-color: blueviolet; */
+  width: fit-content;
+}
+
+.schedule .release{
+  margin-right: 2rem;
+}
+.schedule .topic-content img, .schedule .release img {
+  width: 5.3rem;
+}
+.topic-content{
+  margin-left: 4rem;
+  display: inline-block;
+}
+.topic-content img:hover{
+  opacity: 0.5;
+  color: rgb(169, 169, 16);
+
+}
+.content:hover{
+  opacity: 0.5;
+  color: rgb(139, 72, 13);
+
+}
+
+
+.schedule a{
+  text-decoration: none;
+
+}
+
+
+.schedule .content{
+}
+
+.link-button{
+  border: solid 2px #000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  line-height: 50px;
+  margin-top: 4%;
+ position: relative;
+ background-color: transparent;
+}
+
+
+.link-button:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #000;
+  z-index: -1;
+  transition: width 0.25s ease-in;
+
+}
+
+.link-button:hover:before{
+  width: 100%;
+  
+
+}
+
+.link-button:hover a{
+  color: #ccc;
+}
+
+.link-button a{
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+
+
+}
+
+.movie-gradation {
+  margin-top: 8%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8%;
+  
+}
+.movie-gradation .img-1 img{
+  width: 100%;
+  height: 100%;
+}
+
+.movie-gradation .img-1{
+  width: 100%;
+  height: 100%;
+  transform: skew(0deg,4deg);
+
+
+}
+
+.movie-feature {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.movie-feature img{
+  width: 15%;
+
+}
+
+.movie-video {
+  position:absolute ;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  margin-top: 15%;  
+}
+.movie-video iframe{
+  margin: auto;
+}
+
+
+
+.movie-gradation .img-2 {
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  transform: skew(0deg, -4deg);
+  overflow: hidden;
+  background-color:#000;
+  
+}
+
+
+
+.movie-gradation .link-button{
+  border: solid 2px #fff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  line-height: 50px;
+  margin-top: 4%;
+ position: absolute;
+ background-color: #000;
+ z-index: 1;
+ bottom: 0;
+ margin-bottom: 5rem;
+}
+.movie-gradation .link-button:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  z-index: -1;
+  transition: width 0.25s ease-in;
+
+}
+
+.movie-gradation .link-button:hover:before{
+  width: 100%;
+  
+}
+
+.movie-gradation .link-button a{
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+
+
+}
+
+.movie-gradation .link-button:hover a{
+  color: #000;
+}
+
+.live-list{
+}
+
+.title-live{
+  width: 8%;
+ margin-left: auto;
+ margin-right: auto;
+}
+.title-live img{
+  width: 100%;
+}
+
+
+
+.live-category-tour{
+
+}
+
+.tour-content{
+  background-color: #fff;
+  width: 70%;
+  height: 70px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  position: relative;
+}
+
+.live-tour-image{
+  width: 10%;
+  
+}
+
+.live-tour-image img{
+  width: 80%;
+  transform:translate(-10%,-40%);
+}
+
+
+
+.live-information-day, .live-information-title{
+  font-size: 20px;
+}
+
+
+
+.live-information-title{
+  width: 100%;
+  margin-left: 2%;
+}
+.live-day-title{
+  width: 100%;
+  display: flex;
+  margin-left: 2%;
+  margin-top: 2.3%;
+ }
+
+#footer {
+  margin-top: 8%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+#footer .img-1 {
+  width: 100%;
+  transform: skew(0deg,4deg);
+  z-index: -1;
+}
+
+#footer .img-2 {
+  width: 100%;
+  height: 700px;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: #000;
+  transform: skew(0deg, -4deg);
+  overflow: hidden;
+}
+#footer .img-3{
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  z-index: -1;
+}
+
+#footer .twitter-title{
+  z-index: 1;
+  position: absolute;
+  margin-top: 5%;
+
+}
+
+#footer .twitter-title img{
+  width: 130px;
+}
+
+#footer .twitter{
+  position: absolute;
+  padding-top: 12%;
+  
+}
+
+#footer .twitter-tweet {
+}
+
+
+
+#footer .social-list{
+  position: absolute;
+  transform: translateY(50em);
+}
+
+
+#footer .social-list ul{
+  width: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  
+  
+}
+
+#footer .social-list ul li{
+  margin-left: 13px;
+  margin-right: 13px;
+
+}
+
+#footer .social-list ul li a{
+  font-size: 30px;
+  
+  
+}
+
+
+
+
+#footer .social-list ul li a i{
+  color: #000;
+}
+
+
+
+#footer .footer-logo{
+  position: absolute;
+  transform: translateY(54em);
+}
+#footer .footer-logo img{
+  width: 109px;
+  height: 36px;
+}
+
+#footer .footer-copyright{
+  position: absolute;
+  transform: translateY(58em);
+  letter-spacing: 3px;
+}
+
+
+.topbutton a img{
+  width: 70px;
+
+}
+
+.topbutton  {
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+
+
+.topbutton.active{
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
