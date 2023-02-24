@@ -49,12 +49,15 @@ const app = {
 
         //Scroll and appear the black background
         // const blackBackGround = document.querySelector(".movie-gradation .img-2");
+        // const movieTitle = document.querySelector(".movie-feature img");
         // window.addEventListener("scroll", () => {
         //     // console.log(window.pageYOffset)
 
-        //     if (window.pageYOffset > 1541) {
+        //     if (window.scrollY == 1750) {
+        //         console.log(window.scrollY)
+
         //         blackBackGround.classList.add("active");
-        //         console.log(blackBackGround)
+        //         movieTitle.classList.add('active')
         //     } else {
         //         blackBackGround.classList.remove("active");
         //     }

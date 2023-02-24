@@ -6,16 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Official髭男dism</title>
-  <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css"> -->
+  <!-- font Awesome -->
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="https://higedan.com/wp-content/uploads/2020/04/favicon-1.png">
 
-
+  <!-- Animation style -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
   <!-- link font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -30,7 +42,7 @@
   <div id="main">
     <div id="header">
       <div id="header__logo">
-        <img src="/Web_Official髭男dism/assets/img/logo.png" alt="logo" />
+        <img src="/assets/img/logo.png" alt="logo" />
       </div>
 
       <div id="header__navbar">
@@ -70,11 +82,11 @@
 
 
     <div id="slider">
-      
+
       <div id="slider__intro">
 
         <video autoplay loop muted plays-inline
-          src="assets/video/y2mate.com - Official髭男dism  パラボラOfficial Video_1080p.mp4" type="video/mp4"> 
+          src="assets/video/y2mate.com - Official髭男dism  パラボラOfficial Video_1080p.mp4" type="video/mp4">
         </video>
         <div class="topic">
           <ul>
@@ -86,34 +98,88 @@
         </div>
       </div>
     </div>
-    <div class="slideshow">
-      <div class="slideshow-container">
-        <div class="mySlides fade">
+    <div class="slideshow swiper mySwiper">
+      <div class="slideshow-container swiper-wrapper">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"><img src="assets/img/bnr_10th_750_282.jpg"></a>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"> <img src="assets/img/bnr_official750x282.jpg"></a>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"><img src="assets/img/bnr_tour_2204_750_282.jpg"></a>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"><img src="assets/img/bunner_2.png"></a>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"><img src="assets/img/Editorial_dvd_HP2.jpg"></a>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"><img src="assets/img/Subtitle_HP.jpg"></a>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides__fade swiper-slide">
           <a href="#"><img src="assets/img/Whitenoise_HP.jpg"></a>
         </div>
 
       </div>
-
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-scroll">
+        <div class="swiper-pagination"></div>
+    </div>
 
     </div>
+
+    
+    
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      direction: getDirection(),
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+
+    // auto scroll
+    var buttonNext = document.querySelector('.swiper-button-next');
+    setInterval(() => {
+      buttonNext.click()
+    }, 4000)
+    clearInterval();
+    
+
+  </script>
+
+
+
+
+
+
+
 
 
     <div id="content">
@@ -312,7 +378,7 @@
           <img src="assets/img/imgBackgroundGradation.png" alt="gradation">
         </div>
         <div class="movie-feature">
-          <img src="assets/img/secTitleMovie.png" alt="secTitleMovie">
+          <img class="movie-feature-img" src="assets/img/secTitleMovie.png" alt="secTitleMovie">
         </div>
         <div class="movie-video">
           <iframe width="811" height="449" src="https://www.youtube.com/embed/YQvf9ioIExE" title="YouTube video player"
@@ -321,8 +387,10 @@
             allowfullscreen></iframe>
         </div>
 
-        <div class="img-2">
+        <div class="movie-gradation-background">
+          <div class="img-2">
 
+          </div>
         </div>
 
         <div title="Movie" class="link-button">
@@ -386,14 +454,25 @@
 
 
     </div>
+
+
+
+
+
+
+    
     <div id="footer">
       <img class="img-1" src="assets/img/imgBackgroundGradation.png" alt="imgBackgroundGradation">
-      <div class="img-2">
+      <div class="footer-background">
+        <div class="img-2">
+        </div>
       </div>
       <div class="twitter-title">
         <img src="assets/img/secTitleTwitter.png" alt="secTitleTwitter">
       </div>
+
       <img class="img-3" src="assets/img/imgBackgroundGradation.png" alt="imgBackgroundGradation">
+
 
       <div class="twitter">
         <a class="twitter-timeline" data-width="500" data-height="450"

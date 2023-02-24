@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Futura";
-  src: url(/Web_Official髭男dism/assets/font/Futura\ Bold\ font.ttf);
+  src: url(/assets/font/Futura\ Bold\ font.ttf);
 }
 
 
@@ -179,7 +179,7 @@ body{
 }
 
 
-.slideshow{
+/* .slideshow{
   background-color: rgba(38, 4, 4, 0);
   padding-top: 30px;
 }
@@ -188,7 +188,6 @@ body{
   overflow: hidden;
   width: 100%;
   display: flex;
-  justify-content: space-around;
 }
 
 .mySlides{
@@ -198,6 +197,66 @@ body{
 .mySlides a img{
   border-radius: 20px;
   width: 500px;
+} */
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide  {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide img{
+  width: 95%;
+}
+
+.swiper-scroll{
+  position: relative;
+  z-index: 2;
+   padding-top: 50px;
+}
+
+.swiper-button-next{
+  color: #000 !important;
+}
+.swiper-button-prev{
+  color: #000 !important;
+}
+
+.swiper-button-next:hover{
+  background-color: #c3bcbc !important;
+}
+.swiper-button-prev:hover{
+  background-color: #c3bcbc !important;
+}
+
+
+
+
+.mySlides__fade img{
+  border-radius: 20px;
 }
 
 #content {
@@ -357,9 +416,15 @@ body{
   margin-top: 75px;
 }
 
-.movie-feature img{
-  width: 15%;
+.movie-feature-img{
+  display: none;
+}
 
+
+.movie-feature-img.active{
+  display: block;
+  width: 15%;
+  animation: fadeInUp .5s;
 }
 
 .movie-video {
@@ -373,19 +438,29 @@ body{
   margin: auto;
 }
 
+.movie-gradation-background{
+  transform: skew(0deg, -4deg);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top:0;
+  left: 0;
+  position: absolute;
+}
 
 
-.movie-gradation .img-2 {
+.movie-gradation .img-2.active {
   width: 100%;
   height: 100%;
   top:0;
   left: 0;
   position: absolute;
-  transform: skew(0deg, -4deg);
   overflow: hidden;
   background-color:#000;
-  
+  animation: fadeRightToLeftSkew .2s;
 }
+
+
 
 
 
@@ -507,16 +582,33 @@ body{
   z-index: -1;
 }
 
-#footer .img-2 {
+.footer-background{
+    transform: skew(0deg, -4deg);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top:0;
+  left: 0;
+  position: absolute;
+}
+
+
+.footer-background .img-2 {
   width: 100%;
   height: 700px;
   top:0;
   left: 0;
   position: absolute;
   background-color: #000;
-  transform: skew(0deg, -4deg);
   overflow: hidden;
+  z-index: 1;
+  animation: fadeRightToLeftSkew .3s;
+
 }
+
+
+
+
 #footer .img-3{
   width: 100%;
   height: 1000px;
@@ -622,4 +714,18 @@ body{
   pointer-events: auto;
   opacity: 1;
 }
+
+
+
+
+@keyframes fadeRightToLeftSkew {
+  from {
+    transform: translateX(100%);
+
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 
