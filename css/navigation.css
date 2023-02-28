@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  @font-face {
+    font-family: "Futura";
+    src: url(/assets/font/Futura\ Bold\ font.ttf);
+  }
+
+  html {
+    font-family: "Futura";
+    scroll-behavior: smooth;
+  }
+  
+  #main {
+  }
+  
+  #header {
+    height: 57.5px;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
+  }
+  
+  
+  #header__logo {
+    position: fixed;
+    width: 120px;
+    text-align: center;
+    line-height: 90px;
+  }
+  
+  #header__logo img {
+    width: 60px;
+  }
+  
+  #header__logo img:hover {
+    opacity: 0.6;
+  }
+  
+  #header__navbar {
+    width: 1400px;
+  }
+  
+  #header__navbar #nav {
+    display: block;
+    padding-left: 230px;
+  }
+  
+  #header__navbar #nav li {
+    display: inline-block;
+  }
+  #header__navbar #nav li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 57.5px;
+    padding: 0px 20px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #header__navbar #nav li a:hover {
+    color: rgb(169, 169, 16);
+  }
+  
+  #header__link {
+    position: fixed;
+    display: block;
+    width: 300px;
+    right: 0px;
+    top: 0px;
+    padding-left: 50px;
+  }
+  
+  #header__link ul li {
+    display: inline-block;
+  }
+  
+  #header__link ul li a {
+    color: #fff;
+    line-height: 57.5px;
+    font-size: 25px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  
+  #header__link ul li a:hover {
+    color: rgb(169, 169, 16);
+  }
+  
